@@ -1,0 +1,233 @@
+@font-face {
+    font-family: "m";
+    src: url("./P22MayflowerSmooth.ttf");
+}
+.navbar {
+    display: flex; /* Adiciona flexbox para centralizar */
+    padding: 1rem;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Alinha verticalmente */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-family: m;
+    height: 40px; /* Certifique-se de que a altura é a mesma que a da logo */
+}
+.navbar-brand img {
+    height: 40px; /* Mantenha a altura da logo */
+    margin-right: 10px;
+    vertical-align: middle; /* Pode ajudar a alinhar */
+}
+.navbar-brand span {
+    margin-top: 10px; /* Ajuste fino para alinhar verticalmente */
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0; /* Remover margens laterais */
+}
+.search-bar input {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+/* Menu de ícones */
+.icon-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+}
+.icon-menu .icon-item {
+    text-align: center;
+    position: relative;
+    color: inherit;
+}
+.icon-menu .icon-item i {
+    font-size: 2rem;
+    display: block;
+}
+.icon-menu .icon-item span {
+    color: inherit;
+    text-decoration: none;
+}
+.icon-menu .icon-item:hover span {
+    text-decoration: underline;
+}
+.border-top {
+    border-top: 2px dashed #000;
+    margin: 20px 0;
+}
+
+/* Bem-vindo */
+.welcome-bar {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-bar i {
+    margin-right: 10px; /* Espaço entre o ícone e a mensagem */
+}
+
+/* Carrossel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Espaçamento superior e inferior */
+}
+.carousel-inner {
+    overflow: hidden; /* Esconde partes das imagens que ultrapassam o contêiner */
+}
+.carousel-item img {
+    max-width: 800px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Para centralizar */
+    margin: 0 auto; /* Para centralizar horizontalmente */
+}
+
+/* Cards produtos */
+.card {
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px; /* Espaço entre os cards */
+    border: 1px solid #ddd; /* Borda ao redor do card */
+    transition: transform 0.2s; /* Animação ao passar o mouse */
+    border-radius: 0; 
+}
+.card img {
+    max-height: 350px;/* Altura da imagem reduzida */
+    object-fit: cover;
+}
+.card:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+.details-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.5s;
+}
+.card:hover .details-button {
+    opacity: 1;
+    transform: translate(-50%, -70%); /* Faz o botão subir */
+}
+.product-info {
+    text-align: center; /* Centraliza as informações */
+    padding: 10px; /* Espaço interno */
+    background-color: #f8f9fa; /* Fundo leve para a área de informações */
+    border-top: 1px solid #ddd; /* Borda acima das informações */
+}
+.product-info h5 {
+    margin: 0; /* Remove margens para alinhamento mais limpo */
+}
+.separator {
+    margin: 40px 0; /* Espaço ao redor da linha */
+    text-align: center; /* Centraliza o conteúdo */
+}
+.separator h2 {
+    margin: 20px 0; /* Espaço acima e abaixo do título */
+    font-size: 1.5rem; /* Tamanho do texto do título */
+}
+.line {
+    border-top: 2px solid #28a746c4; /* Linha verde */
+    width: 50%; /* Largura da linha */
+    margin: 0 auto; /* Centraliza a linha */
+}
+
+/* Menu dropdown da lista de velas */
+.icon-menu {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.icon-item a {
+    color: inherit; /* Usa a cor do texto pai */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.icon-item a:hover {
+    color: #333; /* Muda a cor ao passar o mouse (opcional) */
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .carousel-item img {
+        max-height: 200px; /* Altura reduzida do carrossel em telas menores */
+    }
+
+    .icon-menu {
+        flex-direction: column; /* Altera para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+    .icon-menu .icon-item {
+        margin: 10px 0; /* Espaçamento entre os itens */
+    }
+    .search-bar {
+        flex-direction: column; /* Coloca a barra de pesquisa em coluna */
+        align-items: stretch; /* Estica para ocupar a largura total */
+        margin: 10px 0; /* Margem em cima e embaixo */
+    }
+    .search-bar input {
+        margin-bottom: 5px; /* Espaço abaixo do campo de pesquisa */
+    }
+
+    .card {
+        margin-bottom: 20px; /* Espaço entre os cards */
+        height: 300px; /* Altura reduzida do card */
+        max-width: 70%; /* Define a largura máxima do card */
+        margin-left: auto; /* Centraliza horizontalmente */
+        margin-right: auto; /* Centraliza horizontalmente */
+    }
+
+    .card img {
+        height: 200px; /* Altura da imagem reduzida */
+    }
+
+    .product-info h5 {
+        font-size: 1rem; /* Ajuste o tamanho do texto */
+    }
+
+    .product-info p {
+        font-size: 0.9rem; /* Ajuste o tamanho do texto */
+    }
+}
